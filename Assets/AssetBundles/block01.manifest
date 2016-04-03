@@ -1,0 +1,34 @@
+ManifestFileVersion: 0
+CRC: 3391373971
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 05984bc1a41d918b48c89ddab6c49875
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 54ba34c18063bd879c8800c7afa3a372
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+Assets:
+- Assets/Example/Prefabs/pG_movepanel_01.prefab
+Dependencies: []
