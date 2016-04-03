@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 // TODO:
 // namespace を追加
+using UnityEngine.Analytics;
 
 public class GoalChecker : MonoBehaviour {
 
@@ -85,6 +86,13 @@ public class GoalChecker : MonoBehaviour {
 
 				// CustomEvent を作る
 				// TODO:
+				Analytics.CustomEvent("Goal", new Dictionary<string, object>
+					{
+						{ "scene ID", SceneManager.GetActiveScene().buildIndex },
+						{ "coins", ball.count },
+						{ "time sec",  goalTimeSec },
+						{ "time bar",  "TIME:" + String.Format("{0:00}", goalTimeSec) },
+					});
 			}
 		}
 	}

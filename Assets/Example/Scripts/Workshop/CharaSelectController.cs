@@ -22,7 +22,16 @@ public class CharaSelectController : MonoBehaviour
 		newOneChara.SetActive(false);
 
 		// 非消費アイテムを買ったか否かで表示非表示の判定
-		// TODO:
+		if (PlayerPrefs.GetInt("NewCharaUnlocked") == 0)
+		{
+			Debug.Log ("newOneButton.interactable = false");
+			newOneButton.interactable = false;
+		}
+		else
+		{
+			Debug.Log ("newOneButton.interactable = true");
+			newOneButton.interactable = true;
+		}
 	}
 
 	void Start()

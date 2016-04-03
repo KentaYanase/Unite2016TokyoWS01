@@ -259,7 +259,8 @@ public class Purchaser : MonoBehaviour, IStoreListener
 			Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));//If the consumable item has been successfully purchased, add 100 coins to the player's in-game score.ScoreManager.score += 100;
 			// ここに消費アイテムを買った時の処理を入れる
 			// TODO: 
-			
+			PlayerPrefs.SetInt("CoinNum", PlayerPrefs.GetInt("CoinNum") + 100);
+			GameObject.Find("CoinNumUI").GetComponent<ScoreManager>().UpdateCoin();
 		}
 
 		//@Angelo: Same here for a non-consumable (in our chase, the old lady character)
@@ -270,6 +271,7 @@ public class Purchaser : MonoBehaviour, IStoreListener
 			Debug.Log(string.Format("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
 			// ここに非消費アイテムを買った時の処理を入れる
 			// TODO: 
+			PlayerPrefs.SetInt("NewCharaUnlocked", 1);
 		}// Or ... a subscription product has been purchased by this user.
 		else if (String.Equals(args.purchasedProduct.definition.id, kProductIDSubscription, StringComparison.Ordinal))
 		{
